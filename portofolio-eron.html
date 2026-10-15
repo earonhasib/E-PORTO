@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eron – Portofolio Videografi, Foto &amp; Desain</title><meta name="description" content="Portofolio Eron: videografi, fotografi, desain grafis.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Warna utama — ganti di sini untuk mengubah seluruh tema */
+:root{--biru:#7EC8FF;--tua:#1E3A8A;--bg2:#F1F9FF;--aksen:#FFC93C;--coral:#FF6B6B;--r:18px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--tua);background:#fff;line-height:1.6;animation:in .5s}
+body.out{opacity:0;transition:opacity .25s}
+@keyframes in{from{opacity:0}}
+img,iframe{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+section{padding:48px 0}
+h1{font-size:clamp(2.4rem,9vw,4.5rem);line-height:1.05;font-weight:800}
+h2{font-size:1.6rem;margin:28px 0 16px}
+h3{font-size:1.05rem}
+.muted{opacity:.7}.pad{padding:12px 16px}
+.btn{display:inline-block;background:var(--aksen);color:var(--tua);padding:12px 24px;border-radius:99px;font:700 1rem inherit;text-decoration:none;border:2px solid var(--aksen);cursor:pointer;transition:.25s;margin:4px 2px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px #1e3a8a33}
+.btn.o{background:transparent;border-color:var(--tua)}
+.btn.o.act{background:var(--tua);color:#fff}
+.btn.sm{padding:5px 16px;font-size:.85rem}
+.tag{display:inline-block;background:var(--bg2);color:var(--tua);border-radius:99px;padding:2px 12px;font-size:.78rem;font-weight:700}
+/* Navbar */
+header{position:sticky;top:0;z-index:50;background:#ffffffee;backdrop-filter:blur(8px);box-shadow:0 2px 12px #1e3a8a14}
+.bar-nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;font-size:1.4rem;text-decoration:none}.logo span{color:var(--coral)}
+#burger{display:none;background:none;border:0;font-size:1.7rem;color:var(--tua)}
+#menu a{margin-left:20px;text-decoration:none;font-weight:600;padding:4px 0;border-bottom:3px solid transparent}
+#menu a.on,#menu a:hover{border-color:var(--coral)}
+@media(max-width:760px){#burger{display:block}
+#menu{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;padding:12px 20px;box-shadow:0 8px 16px #1e3a8a1a}
+#menu.open{display:block}#menu a{display:block;margin:0;padding:12px 0}}
+/* Hero */
+.hero{background:linear-gradient(160deg,var(--biru),#fff 70%);position:relative;overflow:hidden;padding:80px 0 64px}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:var(--aksen);opacity:.6;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(24px)}}
+.hero .wrap{position:relative;z-index:1}.hero p{margin:16px 0 24px;font-size:1.15rem;max-width:480px}
+/* Kartu & grid */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:#fff;border-radius:var(--r);box-shadow:0 4px 18px #1e3a8a1a;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 14px 30px #1e3a8a33}
+.thumb{aspect-ratio:16/10;background:linear-gradient(135deg,var(--biru),var(--bg2));cursor:pointer}
+.thumb img,.thumb iframe{width:100%;height:100%;object-fit:cover;border:0}
+.info{padding:14px 16px}
+.svc{padding:24px;text-align:center;font-size:1.1rem;font-weight:700}.svc b{display:block;font-size:2rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s,box-shadow .3s}
+.rv.on{opacity:1;transform:none}
+.cta{background:var(--tua);color:#fff;text-align:center;border-radius:var(--r);padding:40px 20px}
+/* Tentang */
+.profil{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:760px){.profil{grid-template-columns:240px 1fr;align-items:center}}
+.foto{aspect-ratio:1;border-radius:var(--r);background:linear-gradient(135deg,var(--biru),var(--aksen));overflow:hidden}
+.foto img{width:100%;height:100%;object-fit:cover}
+.bar{height:10px;background:var(--bg2);border-radius:9px;overflow:hidden;margin:4px 0 14px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--biru),var(--coral))}
+.tl{border-left:3px solid var(--biru);padding-left:18px}.tl>div{margin-bottom:16px}
+/* Tugas */
+.mapel summary{padding:16px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;gap:8px;list-style:none}
+.mapel summary small{font-weight:400;opacity:.6}
+.mapel.kej{border-left:6px solid var(--coral)}   /* penanda warna mapel kejuruan */
+.tugas{display:flex;gap:8px;align-items:center;padding:10px 16px;border-top:1px solid var(--bg2)}.tugas span{flex:1}
+#cari{width:100%;padding:12px 18px;border-radius:99px;border:2px solid var(--biru);font:inherit;color:var(--tua)}
+/* Lightbox & footer */
+#lb{display:none;position:fixed;inset:0;background:#0b1b4acc;z-index:99;align-items:center;justify-content:center;padding:16px}
+#lb.on{display:flex}#lb img{max-height:90vh;border-radius:12px}
+.foot{background:var(--tua);color:#fff;text-align:center;padding:40px 0;margin-top:48px}
+.foot h2{margin-top:0}.foot p{margin:8px 0;opacity:.9}.foot .btn.o{border-color:#fff;color:#fff}
+
+.view{animation:in .4s}
+</style></head><body><header id="nav"></header><main>
+<div class="view" id="v-index">
+<section class="hero"><div class="wrap"><h1>Earon Hasib<br>Ahmad Aktafie</h1>
+<p><b>"Pendiam di balik kamera, lantang lewat visual."</b><br>Panggil saja Eron. Siswa PSPT SMKN 3 Jepara.</p>
+<a class="btn" data-wa href="#">Hubungi Saya</a> <a class="btn o" href="#karya">Lihat Karya</a></div></section>
+<section class="wrap"><h2>Karya Unggulan</h2><div class="grid" id="unggulan"></div></section>
+<section class="wrap"><h2>Layanan</h2><div class="grid">
+<div class="card svc rv"><b>🎬</b>Video<p class="muted">Shooting &amp; editing</p></div>
+<div class="card svc rv"><b>📷</b>Foto<p class="muted">Potret &amp; dokumentasi</p></div>
+<div class="card svc rv"><b>🎨</b>Desain<p class="muted">Poster, feed, logo</p></div></div></section>
+<section class="wrap"><div class="cta rv"><h2 style="margin-top:0">Punya proyek? Mari bikin yang mencolok.</h2><a class="btn" data-wa href="#">Chat via WhatsApp</a></div></section>
+</div>
+<div class="view" id="v-tentang" hidden>
+<section class="wrap"><div class="profil"><div class="foto"><img src="assets/images/profil.jpg" alt="Foto Eron" onerror="this.remove()"></div>
+<div><h1 style="font-size:2.4rem">Tentang Saya</h1>
+<!-- GANTI: tulis cerita singkatmu (2-3 kalimat) -->
+<p>Saya Eron, siswa kelas XI PSPT di SMKN 3 Jepara. Saya lebih nyaman bicara lewat gambar dan suara daripada kata-kata. Dunia televisi mengajarkan saya bahwa satu frame yang tepat bisa bercerita lebih banyak.</p></div></div></section>
+<section class="wrap"><h2>Skill &amp; Tools</h2><div id="skills"></div><div id="tools"></div></section>
+<section class="wrap"><h2>Pengalaman PKL</h2><div class="tl" id="pkl"></div></section>
+<section class="wrap"><h2>Sertifikat</h2><div class="grid" id="sertif"></div></section>
+<section class="wrap"><h2>Sisi Personal</h2><div class="card info rv">
+<!-- GANTI: hobi & motto -->
+<p><b>Hobi:</b> [CONTOH] sinematografi, jalan-jalan sambil memotret, musik.</p><p><b>Motto:</b> [CONTOH] "Biar karya yang bicara."</p></div></section>
+</div>
+<div class="view" id="v-tugas" hidden>
+<section class="wrap"><h1 style="font-size:2.4rem">Tugas Sekolah</h1><br>
+<input id="cari" type="search" placeholder="Cari mapel atau tugas..."><div id="tugas"></div></section>
+</div>
+<div class="view" id="v-karya" hidden>
+<section class="wrap"><h1 style="font-size:2.4rem">Karya Saya</h1><br><div id="filter"></div><br><div class="grid" id="galeri"></div></section>
+</div>
+<div class="view" id="v-prestasi" hidden>
+<section class="wrap"><h1 style="font-size:2.4rem">Prestasi</h1><br><div class="grid" id="prestasi"></div></section>
+</div>
+</main><footer id="foot" class="foot"></footer>
+<script>
+/* ===== DATA PORTOFOLIO — EDIT FILE INI SAJA UNTUK MENAMBAH ISI =====
+   Semua yang berawalan [CONTOH] adalah data contoh, ganti dengan data asli. */
+
+// KONTAK (nomor WA tanpa tanda + atau 0 di depan)
+const KONTAK = {
+  wa: "6289603781902",
+  pesan: "Halo Eron, saya tertarik dengan jasa kamu",
+  ig: "https://www.instagram.com/laronkelelepp",
+  tiktok: "https://www.tiktok.com/@rronnzzz"
+};
+
+// SKILL (v = persen 0-100) & TOOLS
+const SKILLS = [
+  { n: "Editing Video", v: 85 }, { n: "Fotografi", v: 80 },
+  { n: "Desain Grafis", v: 75 }, { n: "Kamera", v: 80 }, { n: "Audio", v: 70 }
+];
+const TOOLS = ["Premiere Pro", "CapCut", "Photoshop", "Canva", "Lightroom"]; // [CONTOH]
+
+// PENGALAMAN PKL
+const PKL = [
+  { waktu: "2026", tempat: "[CONTOH] Nama Tempat PKL", desk: "Tulis tugas/pengalaman singkat di sini." }
+];
+
+// SERTIFIKAT (taruh gambar di assets/images/)
+const SERTIFIKAT = [
+  { judul: "[CONTOH] Sertifikat PKL", img: "assets/images/sertifikat1.jpg" }
+];
+
+// MAPEL: id dipakai di TUGAS. grup: "Umum" | "Kejuruan" | "Lainnya"
+const MAPEL = [
+  { id: "bindo", nama: "Bahasa Indonesia", grup: "Umum" },
+  { id: "bjawa", nama: "Bahasa Jawa", grup: "Umum" },
+  { id: "bing", nama: "Bahasa Inggris", grup: "Umum" },
+  { id: "mtk", nama: "MTK", grup: "Umum" },
+  { id: "pai", nama: "PAI", grup: "Umum" },
+  { id: "pjok", nama: "PJOK", grup: "Umum" },
+  { id: "ppkn", nama: "PPKN", grup: "Umum" },
+  { id: "sejarah", nama: "Sejarah", grup: "Umum" },
+  { id: "rina", nama: "Kejuruan Bu Rina", grup: "Kejuruan" },
+  { id: "iwan", nama: "Kejuruan Pak Iwan", grup: "Kejuruan" },
+  { id: "jurnal", nama: "Jurnalistik", grup: "Kejuruan" },
+  { id: "bk", nama: "BK", grup: "Lainnya" },
+  { id: "kik", nama: "KIK", grup: "Lainnya" }
+];
+
+// TUGAS: mapel = id di atas. jenis: "PDF" | "Foto" | "Drive" | "Word"
+// link: file di assets/pdf/... ATAU link Google Drive
+const TUGAS = [
+  { mapel: "bindo", judul: "[CONTOH] Teks Eksposisi", jenis: "PDF", link: "assets/pdf/contoh.pdf" },
+  { mapel: "rina", judul: "[CONTOH] Storyboard Program TV", jenis: "Drive", link: "https://drive.google.com/" }
+];
+
+// KARYA. kategori: "Video" | "Foto" | "Desain Grafis"
+// tipe: "youtube" (src = ID video) | "drive" (src = ID file Drive) | "foto" (src = path gambar)
+// unggulan: true -> tampil di beranda (maks 3)
+const KARYA = [
+  { judul: "[CONTOH] Video Profil", kategori: "Video", tipe: "youtube", src: "GANTI_ID_YOUTUBE", desk: "Deskripsi singkat karya.", unggulan: true },
+  { judul: "[CONTOH] Foto Potret", kategori: "Foto", tipe: "foto", src: "assets/images/foto1.jpg", desk: "Deskripsi singkat karya.", unggulan: true },
+  { judul: "[CONTOH] Poster Event", kategori: "Desain Grafis", tipe: "foto", src: "assets/images/desain1.jpg", desk: "Deskripsi singkat karya.", unggulan: true }
+];
+
+// PRESTASI
+const PRESTASI = [
+  { nama: "[CONTOH] Juara 1 Lomba Videografi", tahun: "2026", penyelenggara: "Nama Penyelenggara", img: "assets/images/prestasi1.jpg" }
+];
+
+</script>
+<script>
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const wa = `https://wa.me/${KONTAK.wa}?text=${encodeURIComponent(KONTAK.pesan)}`;
+const MENU = [["#index","Beranda"],["#tentang","Tentang"],["#tugas","Tugas"],["#karya","Karya"],["#prestasi","Prestasi"]];
+
+/* Navbar & footer dibuat di sini -> otomatis sama di semua halaman */
+$("#nav").innerHTML = `<div class="wrap bar-nav"><a class="logo" href="#index">Eron<span>.</span></a>
+<button id="burger" aria-label="Menu">☰</button><nav id="menu">${MENU.map(m => `<a href="${m[0]}" data-r="${m[0].slice(1)}">${m[1]}</a>`).join("")}</nav></div>`;
+$("#foot").innerHTML = `<div class="wrap"><h2>Yuk, ngobrol soal proyekmu</h2>
+<p>© 2026 Earon Hasib Ahmad Aktafie · SMKN 3 Jepara</p><p>
+<a class="btn" href="${wa}" target="_blank" rel="noopener">WhatsApp</a>
+<a class="btn o" href="${KONTAK.ig}" target="_blank" rel="noopener">Instagram</a>
+<a class="btn o" href="${KONTAK.tiktok}" target="_blank" rel="noopener">TikTok</a></p></div>`;
+$$("a[data-wa]").forEach(a => { a.href = wa; a.target = "_blank"; });
+$("#burger").onclick = () => $("#menu").classList.toggle("open");
+
+/* Animasi muncul saat scroll */
+const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add("on")), { threshold: .12 });
+const reveal = () => $$(".rv:not(.on)").forEach(e => io.observe(e));
+
+/* Transisi antar halaman */
+document.addEventListener("click", e => {
+  const lb = e.target.closest("[data-lb]");
+  if (lb) { $("#lb").innerHTML = `<img src="${lb.dataset.lb}" alt="">`; $("#lb").classList.add("on"); }
+  else if (e.target.closest("#lb")) $("#lb").classList.remove("on");
+});
+addEventListener("pageshow", () => document.body.classList.remove("out"));
+document.body.insertAdjacentHTML("beforeend", `<div id="lb"></div>`);
+
+/* Kartu karya (video embed / foto lightbox) */
+const media = k => k.tipe == "youtube" ? `<iframe loading="lazy" src="https://www.youtube.com/embed/${k.src}" allowfullscreen></iframe>`
+  : k.tipe == "drive" ? `<iframe loading="lazy" src="https://drive.google.com/file/d/${k.src}/preview" allowfullscreen></iframe>`
+  : `<img loading="lazy" src="${k.src}" alt="${k.judul}" onerror="this.remove()">`;
+const karyaCard = k => `<article class="card rv" ${k.tipe == "foto" ? `data-lb="${k.src}"` : ""}><div class="thumb">${media(k)}</div>
+<div class="info"><span class="tag">${k.kategori}</span><h3>${k.judul}</h3><p class="muted">${k.desk}</p></div></article>`;
+const imgCard = (t, s, img) => `<article class="card rv"><div class="thumb" data-lb="${img}"><img loading="lazy" src="${img}" alt="${t}" onerror="this.remove()"></div><div class="info"><h3>${t}</h3><p class="muted">${s || ""}</p></div></article>`;
+
+const PAGES = {
+  index() {
+    $("#unggulan").innerHTML = KARYA.filter(k => k.unggulan).slice(0, 3).map(karyaCard).join("");
+  },
+  tentang() {
+    $("#skills").innerHTML = SKILLS.map(s => `<div class="rv"><b>${s.n}</b> <small>${s.v}%</small><div class="bar"><i style="width:${s.v}%"></i></div></div>`).join("");
+    $("#tools").innerHTML = TOOLS.map(t => `<span class="tag">${t}</span>`).join(" ");
+    $("#pkl").innerHTML = PKL.map(p => `<div class="rv"><b>${p.tempat}</b> <small>${p.waktu}</small><p>${p.desk}</p></div>`).join("");
+    $("#sertif").innerHTML = SERTIFIKAT.map(s => imgCard(s.judul, "", s.img)).join("");
+  },
+  tugas() {
+    const box = $("#tugas"), q = $("#cari");
+    const draw = () => {
+      const s = q.value.toLowerCase();
+      box.innerHTML = ["Umum", "Kejuruan", "Lainnya"].map(g => {
+        const items = MAPEL.filter(m => m.grup == g).map(m => {
+          const ts = TUGAS.filter(t => t.mapel == m.id);
+          if (s && !m.nama.toLowerCase().includes(s) && !ts.some(t => t.judul.toLowerCase().includes(s))) return "";
+          return `<details class="card mapel rv ${g == "Kejuruan" ? "kej" : ""}" ${s ? "open" : ""}><summary>${m.nama}<small>${ts.length} tugas</small></summary>
+          ${ts.map(t => `<div class="tugas"><span>${t.judul}</span><b class="tag">${t.jenis}</b><a class="btn sm" href="${t.link}" target="_blank" rel="noopener">Lihat</a></div>`).join("") || `<p class="muted pad">Belum ada tugas.</p>`}</details>`;
+        }).join("");
+        return items ? `<h2>${g}</h2><div class="grid">${items}</div>` : "";
+      }).join("") || "<p>Tidak ditemukan.</p>";
+      reveal();
+    };
+    q.oninput = draw; draw();
+  },
+  karya() {
+    const cats = ["Semua", "Video", "Foto", "Desain Grafis"];
+    $("#filter").innerHTML = cats.map((c, i) => `<button class="btn o sm ${i ? "" : "act"}">${c}</button>`).join(" ");
+    const draw = c => { $("#galeri").innerHTML = KARYA.filter(k => c == "Semua" || k.kategori == c).map(karyaCard).join(""); reveal(); };
+    $$("#filter button").forEach(b => b.onclick = () => { $$("#filter button").forEach(x => x.classList.remove("act")); b.classList.add("act"); draw(b.textContent); });
+    draw("Semua");
+  },
+  prestasi() {
+    $("#prestasi").innerHTML = PRESTASI.map(p => imgCard(p.nama, `${p.tahun} · ${p.penyelenggara}`, p.img)).join("");
+  }
+};
+const route = () => {
+  const r = location.hash.slice(1), id = PAGES[r] ? r : "index";
+  $$(".view").forEach(v => v.hidden = v.id != "v-" + id);
+  $$("#menu a").forEach(a => a.classList.toggle("on", a.dataset.r == id));
+  $("#menu").classList.remove("open"); scrollTo(0, 0); reveal();
+};
+addEventListener("hashchange", route);
+Object.values(PAGES).forEach(f => f());
+route();
+
+</script></body></html>
