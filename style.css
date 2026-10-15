@@ -1,0 +1,66 @@
+/* Warna utama — ganti di sini untuk mengubah seluruh tema */
+:root{--biru:#7EC8FF;--tua:#1E3A8A;--bg2:#F1F9FF;--aksen:#FFC93C;--coral:#FF6B6B;--r:18px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--tua);background:#fff;line-height:1.6;animation:in .5s}
+body.out{opacity:0;transition:opacity .25s}
+@keyframes in{from{opacity:0}}
+img,iframe{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+section{padding:48px 0}
+h1{font-size:clamp(2.4rem,9vw,4.5rem);line-height:1.05;font-weight:800}
+h2{font-size:1.6rem;margin:28px 0 16px}
+h3{font-size:1.05rem}
+.muted{opacity:.7}.pad{padding:12px 16px}
+.btn{display:inline-block;background:var(--aksen);color:var(--tua);padding:12px 24px;border-radius:99px;font:700 1rem inherit;text-decoration:none;border:2px solid var(--aksen);cursor:pointer;transition:.25s;margin:4px 2px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px #1e3a8a33}
+.btn.o{background:transparent;border-color:var(--tua)}
+.btn.o.act{background:var(--tua);color:#fff}
+.btn.sm{padding:5px 16px;font-size:.85rem}
+.tag{display:inline-block;background:var(--bg2);color:var(--tua);border-radius:99px;padding:2px 12px;font-size:.78rem;font-weight:700}
+/* Navbar */
+header{position:sticky;top:0;z-index:50;background:#ffffffee;backdrop-filter:blur(8px);box-shadow:0 2px 12px #1e3a8a14}
+.bar-nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;font-size:1.4rem;text-decoration:none}.logo span{color:var(--coral)}
+#burger{display:none;background:none;border:0;font-size:1.7rem;color:var(--tua)}
+#menu a{margin-left:20px;text-decoration:none;font-weight:600;padding:4px 0;border-bottom:3px solid transparent}
+#menu a.on,#menu a:hover{border-color:var(--coral)}
+@media(max-width:760px){#burger{display:block}
+#menu{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;padding:12px 20px;box-shadow:0 8px 16px #1e3a8a1a}
+#menu.open{display:block}#menu a{display:block;margin:0;padding:12px 0}}
+/* Hero */
+.hero{background:linear-gradient(160deg,var(--biru),#fff 70%);position:relative;overflow:hidden;padding:80px 0 64px}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:var(--aksen);opacity:.6;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(24px)}}
+.hero .wrap{position:relative;z-index:1}.hero p{margin:16px 0 24px;font-size:1.15rem;max-width:480px}
+/* Kartu & grid */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:#fff;border-radius:var(--r);box-shadow:0 4px 18px #1e3a8a1a;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 14px 30px #1e3a8a33}
+.thumb{aspect-ratio:16/10;background:linear-gradient(135deg,var(--biru),var(--bg2));cursor:pointer}
+.thumb img,.thumb iframe{width:100%;height:100%;object-fit:cover;border:0}
+.info{padding:14px 16px}
+.svc{padding:24px;text-align:center;font-size:1.1rem;font-weight:700}.svc b{display:block;font-size:2rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s,box-shadow .3s}
+.rv.on{opacity:1;transform:none}
+.cta{background:var(--tua);color:#fff;text-align:center;border-radius:var(--r);padding:40px 20px}
+/* Tentang */
+.profil{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:760px){.profil{grid-template-columns:240px 1fr;align-items:center}}
+.foto{aspect-ratio:1;border-radius:var(--r);background:linear-gradient(135deg,var(--biru),var(--aksen));overflow:hidden}
+.foto img{width:100%;height:100%;object-fit:cover}
+.bar{height:10px;background:var(--bg2);border-radius:9px;overflow:hidden;margin:4px 0 14px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--biru),var(--coral))}
+.tl{border-left:3px solid var(--biru);padding-left:18px}.tl>div{margin-bottom:16px}
+/* Tugas */
+.mapel summary{padding:16px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;gap:8px;list-style:none}
+.mapel summary small{font-weight:400;opacity:.6}
+.mapel.kej{border-left:6px solid var(--coral)}   /* penanda warna mapel kejuruan */
+.tugas{display:flex;gap:8px;align-items:center;padding:10px 16px;border-top:1px solid var(--bg2)}.tugas span{flex:1}
+#cari{width:100%;padding:12px 18px;border-radius:99px;border:2px solid var(--biru);font:inherit;color:var(--tua)}
+/* Lightbox & footer */
+#lb{display:none;position:fixed;inset:0;background:#0b1b4acc;z-index:99;align-items:center;justify-content:center;padding:16px}
+#lb.on{display:flex}#lb img{max-height:90vh;border-radius:12px}
+.foot{background:var(--tua);color:#fff;text-align:center;padding:40px 0;margin-top:48px}
+.foot h2{margin-top:0}.foot p{margin:8px 0;opacity:.9}.foot .btn.o{border-color:#fff;color:#fff}
